@@ -1,4 +1,5 @@
 function ifsAndElses() {
+
     let value = -13; // Number Assignment
 
     if (value > 0) {
@@ -11,6 +12,7 @@ function ifsAndElses() {
 }
 
 function switchStatements() {
+
     let day = 1;
 
     switch (day) {
@@ -41,5 +43,66 @@ function switchStatements() {
     }
 }
 
+function forLoop() {
+
+    for (let i = 0; i <= 5; i++) {
+        console.log(i)
+    }
+}
+
+function whileLoop() {
+
+    let i = 1;
+
+    while (i <= 5) {
+        console.log(i++);
+    }
+}
+
+function doWhileLoop() {
+
+    let i = 1;
+
+    do {
+        console.log(i++)
+    } while (i <= 5);
+}
+
+function breaking() {
+    for (let i = 0; i <= 10; i++) {
+        if (i == 3) {
+            break;
+        }
+        console.log(i);
+    }
+}
+
+function continues() {
+    for (let i = 0; i <= 10; i++) {
+        if (i == 3) {
+            continue;
+        }
+        console.log(i);
+    }
+}
+
+let globalVar = "I'm A Global Variable!";
+
+function scopesAndContext() {
+
+    let localVar = "I'm A Local Variable!";
+
+    console.log(globalVar);
+    console.log(localVar);
+}
+
+// console.log(localVar); <-- This cannot be used, as 'localVar' is only accessible from inside the function, unless exported/returned...
+
 console.log(ifsAndElses());
 console.log(switchStatements());
+console.log(forLoop());
+console.log(whileLoop());
+console.log(doWhileLoop());
+console.log(breaking());
+console.log(continues());
+console.log(scopesAndContext());
